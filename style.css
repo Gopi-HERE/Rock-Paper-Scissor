@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: black;
+    color: aqua;
+}
+.heading{
+    padding: 10px;
+    background-color: rgb(12, 12, 59);
+    color: rgba(240, 248, 255, 0.541);
+    text-align: center;
+}
+.choices{
+    margin: 20px;
+    font-size: 100px;
+    text-align: center;
+}
+.choice{
+    display: inline-block;
+    border:10px solid white; 
+    border-radius: 50%;
+}
+#rock,#scissor{
+    rotate: 270deg;
+}
+.choice:hover{
+    opacity:50%;
+    cursor: pointer;
+}
+
+.score{
+    text-align: center;
+}
+#myScore,#compScore{
+    margin: 10px;
+    display: inline-block;
+    font-size: x-large;
+}
+#result{
+    margin: 10px;
+    text-align: center;
+    font-size: x-large;
+    color: blanchedalmond;
+}
+.Reset{
+    text-align: center;
+}
+#reset{
+    border: 3px solid white;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 10px;
+}
+#reset:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#winner{
+    display:  none;
+    text-align: center;
+    font-size: xx-large;
+}
