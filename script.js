@@ -1,3 +1,19 @@
+let submit = document.querySelector("#submit")
+let game = document.querySelector(".game")
+let login = document.querySelector(".login")
+let username = document.querySelector("#username");
+let name = ""
+submit.addEventListener('click',(e)=>{
+    name = username.value
+    console.log(username)
+    if(name.length<3 || name.length>30){
+        alert("4<=Username length<=30");
+    }
+    else{
+        game.classList.toggle('tgl')
+        login.classList.toggle('tgl')
+    }
+})
 let userP = 0;
 let compP = 0;
 const match = document.getElementById("match");
@@ -28,17 +44,17 @@ choices.forEach((choice)=>{
             result.innerHTML = `You picked  ${user}, Comp picked ${comp}..Computer got the point`;
             compP++;
         }       
-        userScore.innerHTML=`Your Score : ${userP}`;
-        compScore.innerHTML=`Comp Score : ${compP}`; 
+        userScore.innerHTML=`${name} : ${userP}`;
+        compScore.innerHTML=`Computer : ${compP}`; 
         if(userP===10){
             match.style.display="none";
             winner.style.display="block";
-            winner.innerHTML =`Congratulations!! You won the game. Your score is 10 and Computer score is ${compP}`;
+            winner.innerHTML =`Congratulations, ${name}!! You won the game. Your score is 10 and Computer score is ${compP}`;
         }
         else if(compP==10) {
             match.style.display= "none";
             winner.style.display ="block";
-            winner.innerHTML =`You are a LOSER!! Computer won the game. Computer's score is 10 and your score is ${userP}`;
+            winner.innerHTML =`You are a LOSER, ${name}!! Computer won the game. Computer's score is 10 and your score is ${userP}..You Dumbass`;
         }
     })
 })
